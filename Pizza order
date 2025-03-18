@@ -1,0 +1,24 @@
+print("Welcome to Python Pizza Deliveries!")
+size = input("What size pizza do you want? S, M or L: ").upper()
+pepperoni = input("Do you want pepperoni on your pizza? Y or N: ").upper()
+extra_cheese = input("Do you want extra cheese? Y or N: ").upper()
+
+cart = 0
+
+if size == "S":
+    cart = 15
+    if pepperoni == "Y":
+        cart += 2
+elif size == "M":
+    cart = 20
+    if pepperoni == "Y":
+        cart += 3
+else:
+    cart = 25
+    if pepperoni == "Y":
+        cart += 3
+if extra_cheese == "Y":
+    cart += 1
+
+print(f"You ordered a {size} pizza. Added any pepperoni? {pepperoni}. Added extra cheese? {extra_cheese}.")
+print(f"Your total in cart is ${cart}.")
